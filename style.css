@@ -1,8 +1,11 @@
+
+
 /* BASE */
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
@@ -21,6 +24,8 @@ body {
 a {
     text-decoration: none;
     color: #fff;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
     transition: .3s all ease;
 }
 
@@ -52,6 +57,8 @@ hr {
     padding: 1.2rem 2.3rem;
     border-radius: 0.3rem;
     border: none;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
     transition: .4s all ease;
 }
 
@@ -72,12 +79,17 @@ hr {
 
 /* Grid Utility */
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .justify-center {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 [class*='col'] {
@@ -85,15 +97,22 @@ hr {
 }
 
 .col-12 {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     max-width: 100%;
 }
 
 /* HEADER */
 .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 1.2rem;
@@ -118,6 +137,8 @@ hr {
  }
 
 .header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
 }
@@ -128,6 +149,8 @@ hr {
 }
 
 .header__list a {
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
     transition: .4s all ease;
 }
 
@@ -173,9 +196,15 @@ hr {
 /* HERO */
 .hero {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100vh;
     background: url('./images/hero.jpg');
     background-repeat: no-repeat;
@@ -201,9 +230,15 @@ hr {
 .about {
     background: #f6f6f6;
     padding: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #373a3c;
 }
 
@@ -280,6 +315,8 @@ hr {
 .skills .skill {
     background: #ff4500;
     padding: 1rem;
+    -webkit-transition: .4s all ease;
+    -o-transition: .4s all ease;
     transition: .4s all ease;
 }
 
@@ -392,7 +429,8 @@ hr {
     }
 
     .col-md-6 {
-        flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
         max-width: 50%;
     }
     
@@ -406,7 +444,8 @@ hr {
     }
 
     .col-lg-4 {
-        flex-basis: 33.3333333333%;
+        -ms-flex-preferred-size: 33.3333333333%;
+            flex-basis: 33.3333333333%;
         max-width: 33.3333333333%;
     }
 
